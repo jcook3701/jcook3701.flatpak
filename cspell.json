@@ -1,0 +1,27 @@
+{
+    "version": "0.2",
+    "language": "en",
+    "useGitignore": true,
+    "words": [
+        "ansible",
+        "apt",
+        "jcook3701",
+        "flatpak",
+        "jcook3701.flatpak",
+        "jcook3701",
+        "codespell",
+        "cookiecutter",
+        "cookiecutter_project_upgrader",
+        "cli",
+        "mkdirp",
+        "tsmerge",
+        "git",
+        "githubusercontent",
+        "streetsidesoftware",
+        "vsmarketplacebadge",
+        "visualstudio"
+    ],
+    "flagWords": [
+        "hte"
+    ]
+}
