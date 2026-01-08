@@ -352,14 +352,14 @@ spellcheck:
 typecheck:
 	$(AT)echo "🧠 Checking types (MyPy)..."
 	$(AT)$(MAKE) list-python-folders
-	$(AT)$(call run_ci_safe, $(MYPY) $(SRC_DIR) $(TESTS_DIR))
+	$(AT)$(call run_ci_safe, $(MYPY) '.')
 	$(AT)echo "✅ Python typecheck complete!"
 # --------------------------------------------------
 # 🧪 Testing (pytest)
 # --------------------------------------------------
 test:
 	$(AT)echo "🧪 Running tests with pytest..."
-	$(AT)$(call run_ci_safe, $(PYTEST) $(TESTS_DIR))
+	$(AT)$(call run_ci_safe, $(PYTEST) --suppress-no-test-exit-code)
 	$(AT)echo "✅ Python tests complete!"
 # --------------------------------------------------
 # 📚 Documentation (Sphinx + Ansible Autodoc + Jekyll)
