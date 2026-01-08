@@ -9,17 +9,18 @@ parent: jcook3701.flatpak
 
 ## Tags:
 
-* `lab` -
+* `lab` - 
 
 
-* `homelab` -
+* `homelab` - 
 
 
-* `automation` -
+* `automation` - 
 
 
-* `infrastructure` -
+* `infrastructure` - 
 
 
 
 Documentation generated using: [Ansible-autodoc](https://github.com/AndresBott/ansible-autodoc)
+
