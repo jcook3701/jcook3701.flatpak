@@ -10,3 +10,15 @@
 
 <h2 id="overview">Overview</h2>
 <p>Ansible installer for flatpak packages.</p>
+
+<hr />
+
+<p><img src="https://github.com/jcook3701/jcook3701.flatpak/actions/workflows/dependency-check.yml/badge.svg" alt="dependency-check" />
+<img src="https://github.com/jcook3701/jcook3701.flatpak/actions/workflows/format-check.yml/badge.svg" alt="format-check" />
+<img src="https://github.com/jcook3701/jcook3701.flatpak/actions/workflows/lint-check.yml/badge.svg" alt="lint-check" />
+<img src="https://github.com/jcook3701/jcook3701.flatpak/actions/workflows/security-audit.yml/badge.svg" alt="security-audit" />
+<img src="https://github.com/jcook3701/jcook3701.flatpak/actions/workflows/spellcheck.yml/badge.svg" alt="spellcheck" />
+<img src="https://github.com/jcook3701/jcook3701.flatpak/actions/workflows/tests.yml/badge.svg" alt="tests" />
+<img src="https://github.com/jcook3701/jcook3701.flatpak/actions/workflows/typecheck.yml/badge.svg" alt="typecheck" /></p>
+
+<hr />
