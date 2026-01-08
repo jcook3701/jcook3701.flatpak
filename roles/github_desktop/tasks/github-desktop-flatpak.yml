@@ -1,0 +1,4 @@
+---
+- name: Install Github-Desktop with flatpak
+  ansible.builtin.command: flatpak install flathub io.github.shiftey.Desktop
+  when: ansible_facts.packages['flatpak'] is defined
