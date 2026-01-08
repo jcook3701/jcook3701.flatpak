@@ -71,6 +71,7 @@ tools = [
   "pytest>=9.0",
   "pytest-ansible>=1.3",
   "pytest-cov>=7.0",
+  "pytest-custom-exit-code>=0.3.0",
   "ruff>=0.14.0",
   "tomllint>=0.3",
   "yamllint>=1.0",
