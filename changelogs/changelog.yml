@@ -1,7 +1,7 @@
 ---
 ancestor: null
 releases:
-  1.0.0:
+  1.0.1:
     changes:
       breaking_changes:
         - Detail any changes that break backward compatibility.

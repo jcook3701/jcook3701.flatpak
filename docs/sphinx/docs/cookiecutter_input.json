@@ -20,5 +20,5 @@
     "description": "Ansible installer for flatpak packages.",
     "project_name": "flatpak",
     "project_slug": "flatpak",
-    "version": "1.0.0"
+    "version": "1.0.1"
 }
