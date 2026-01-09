@@ -27,7 +27,7 @@ sys.path.insert(0, os.path.abspath("../../src"))
 project = "flatpak"
 copyright = "2025, Jared Cook"  # noqa: A001
 author = "Jared Cook"
-release = "1.0.1"
+release = "1.0.0"
 
 html_context = {
     "copyright": "2025, Jared Cook",

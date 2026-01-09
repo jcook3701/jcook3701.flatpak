@@ -64,7 +64,7 @@ GALAXY_NAMESPACE := jcook3701
 GALAXY_COLLECTION := flatpak
 GALAXY_PACKAGE_NAME = $(GALAXY_NAMESPACE).$(GALAXY_COLLECTION)
 GALAXY_AUTHOR := Jared Cook
-GALAXY_VERSION := 1.0.1
+GALAXY_VERSION := 1.0.0
 GALAXY_RELEASE := v$(GALAXY_VERSION)
 GALAXY_PATH := $(PROJECT_ROOT)
 # --------------------------------------------------
@@ -359,7 +359,7 @@ typecheck:
 # --------------------------------------------------
 test:
 	$(AT)echo "🧪 Running tests with pytest..."
-	$(AT)$(call run_ci_safe, $(PYTEST) --suppress-no-test-exit-code)
+	$(AT)$(call run_ci_safe, $(PYTEST) $(TESTS_DIR))
 	$(AT)echo "✅ Python tests complete!"
 # --------------------------------------------------
 # 📚 Documentation (Sphinx + Ansible Autodoc + Jekyll)
@@ -446,7 +446,7 @@ git-release: git-dependency-check gh-dependency-check
 		$(GITHUB) release create $(REGALAXY_RELEASELEASE) --generate-notes; \
 		echo "✅ Finished uploading Release - $(GALAXY_RELEASE)!"; \
 	else \
-		echo "❌ Git is not yet initialized.  Skipping version release."; \
+		echo "❌ Git is not yet initialized.  Skipping version release." \
 	fi
 # --------------------------------------------------
 # 🪐 Ansible Galaxy Commands (ansible-galaxy)
@@ -470,7 +470,7 @@ galaxy-publish:
 # --------------------------------------------------
 pre-commit: test security dependency-check format-fix lint-check spellcheck typecheck
 pre-release: clean install pre-commit build-docs changelog galaxy-build
-release: git-release bump-version-patch
+# release: git-release galaxy-publish bump-version-patch
 # --------------------------------------------------
 # 🧹 Clean artifacts
 # --------------------------------------------------

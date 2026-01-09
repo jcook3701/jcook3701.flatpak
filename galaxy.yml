@@ -19,11 +19,12 @@
 ---
 namespace: "jcook3701"
 name: "flatpak"
-version: "1.0.1"
+version: "1.0.0"
 authors:
   - "Jared Cook @jcook3701"
 license:
-  - GPL-3.0
+  - MIT
+license_file: LICENSE
 readme: ./README.md
 description: >
   Ansible installer for flatpak packages.
