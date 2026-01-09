@@ -19,7 +19,7 @@
 ---
 namespace: "jcook3701"
 name: "flatpak"
-version: "1.0.0"
+version: "1.0.1"
 authors:
   - "Jared Cook @jcook3701"
 license:

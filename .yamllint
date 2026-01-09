@@ -1,10 +1,10 @@
 # .yamllint
 ---
 extends: default
-ignore:
-  - .venv
-  - .git
-  - changelogs/.plugin-cache.yaml
+ignore: |
+  .venv/
+  .git/
+  changelogs/.plugin-cache.yaml
 
 rules:
   line-length:
@@ -21,7 +21,7 @@ rules:
     present: true
     level: error
   key-duplicates:
-    forbid-duplicated-merge-keys: true
+    level: error  # Defining a level automatically enables the rule
   indentation:
     level: error
     indent-sequences: consistent
