@@ -6,7 +6,7 @@
 <h1 id="flatpak">flatpak</h1>
 
 <p><strong>Author:</strong> Jared Cook<br />
-<strong>Version:</strong> 1.0.2</p>
+<strong>Version:</strong> 1.0.0</p>
 
 <h2 id="overview">Overview</h2>
 <p>Ansible installer for flatpak packages.</p>

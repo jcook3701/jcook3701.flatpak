@@ -22,7 +22,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "jcook3701_flatpak"
-version = "1.0.2"
+version = "1.0.0"
 description = "Ansible installer for flatpak packages."
 authors = [
     { name="Jared Cook", email="jcook3701+github@gmail.com" }
@@ -125,7 +125,7 @@ exclude = '''
 # Version Bumping (bump-my-version):
 # ====================================
 [tool.bumpversion]
-current_version = "1.0.2"
+current_version = "1.0.0"
 parse = "(?P<major>\\d+)\\.(?P<minor>\\d+)\\.(?P<patch>\\d+)"
 serialize = ["{major}.{minor}.{patch}"]
 search = "{current_version}"
