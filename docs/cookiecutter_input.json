@@ -24,7 +24,7 @@
         "lstrip_blocks": true,
         "trim_blocks": true
     },
-    "_output_dir": "/home/jcook/Documents/git_repo",
+    "_output_dir": "/home/jcook/Documents/git_repo/jcook3701.flatpak/.git/cookiecutter",
     "_repo_dir": "/home/jcook/.cookiecutters/ansible-galaxy-cookiecutter",
     "_template": "git@github.com:jcook3701/ansible-galaxy-cookiecutter.git",
     "add_github_docs": true,

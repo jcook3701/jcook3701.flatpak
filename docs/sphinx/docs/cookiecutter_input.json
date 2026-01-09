@@ -13,12 +13,12 @@
         "lstrip_blocks": true,
         "trim_blocks": true
     },
-    "_output_dir": "/home/jcook/Documents/git_repo/jcook3701.flatpak/docs/_tmp_docs",
+    "_output_dir": "/home/jcook/Documents/git_repo/jcook3701.flatpak/.git/cookiecutter/jcook3701.flatpak/docs/_tmp_docs",
     "_repo_dir": "/home/jcook/.cookiecutters/sphinx-cookiecutter",
     "_template": "https://github.com/jcook3701/sphinx-cookiecutter.git",
     "author": "Jared Cook",
     "description": "Ansible installer for flatpak packages.",
     "project_name": "flatpak",
     "project_slug": "flatpak",
-    "version": "1.0.0"
+    "version": "1.0.1"
 }

@@ -13,7 +13,7 @@
         "lstrip_blocks": true,
         "trim_blocks": true
     },
-    "_output_dir": "/home/jcook/Documents/git_repo/jcook3701.flatpak/docs/_tmp_docs",
+    "_output_dir": "/home/jcook/Documents/git_repo/jcook3701.flatpak/.git/cookiecutter/jcook3701.flatpak/docs/_tmp_docs",
     "_repo_dir": "/home/jcook/.cookiecutters/github-docs-cookiecutter",
     "_template": "https://github.com/jcook3701/github-docs-cookiecutter.git",
     "author": "Jared Cook",
@@ -27,5 +27,5 @@
     "project_slug": "flatpak",
     "theme": "pmarsceill/just-the-docs",
     "twitter_username": "",
-    "version": "1.0.0"
+    "version": "1.0.1"
 }
