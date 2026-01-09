@@ -186,6 +186,7 @@ PRECOMMIT := $(ACTIVATE) && pre-commit
 # 🪐 Ansible Galaxy
 # --------------------------------------------------
 ANSIBLE_GALAXY := $(ACTIVATE) && ansible-galaxy
+GALAXY_IMPORTER := $(PYTHON) -m galaxy_importer.main
 # --------------------------------------------------
 # 🏃‍♂️ Nutri-Matic Commands
 # --------------------------------------------------
@@ -359,7 +360,7 @@ typecheck:
 # --------------------------------------------------
 test:
 	$(AT)echo "🧪 Running tests with pytest..."
-	$(AT)$(call run_ci_safe, $(PYTEST) $(TESTS_DIR))
+	$(AT)$(call run_ci_safe, $(PYTEST) --suppress-no-test-exit-code)
 	$(AT)echo "✅ Python tests complete!"
 # --------------------------------------------------
 # 📚 Documentation (Sphinx + Ansible Autodoc + Jekyll)
@@ -390,6 +391,9 @@ readme:
 		--tmp-dir $(README_GEN_DIR) --jekyll-cmd '$(JEKYLL_BUILD)'
 
 build-docs: sphinx autodoc jekyll readme
+	$(AT)$(GIT) add $(DOCS_DIR)
+	$(AT)$(GIT) add $(README_FILE)
+
 run-docs: jekyll-serve
 # --------------------------------------------------
 # 🔖 Version Bumping (bumpy-my-version)
@@ -446,7 +450,7 @@ git-release: git-dependency-check gh-dependency-check
 		$(GITHUB) release create $(REGALAXY_RELEASELEASE) --generate-notes; \
 		echo "✅ Finished uploading Release - $(GALAXY_RELEASE)!"; \
 	else \
-		echo "❌ Git is not yet initialized.  Skipping version release." \
+		echo "❌ Git is not yet initialized.  Skipping version release."; \
 	fi
 # --------------------------------------------------
 # 🪐 Ansible Galaxy Commands (ansible-galaxy)
@@ -470,7 +474,7 @@ galaxy-publish:
 # --------------------------------------------------
 pre-commit: test security dependency-check format-fix lint-check spellcheck typecheck
 pre-release: clean install pre-commit build-docs changelog galaxy-build
-# release: git-release galaxy-publish bump-version-patch
+release: git-release bump-version-patch
 # --------------------------------------------------
 # 🧹 Clean artifacts
 # --------------------------------------------------

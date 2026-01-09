@@ -5,12 +5,21 @@
     "__py_package_name": "jcook3701_flatpak",
     "__python_target_version": "py311",
     "__title": "jcook3701 flatpak",
-    "_checkout": "main",
+    "_checkout": "feat-006",
     "_copy_without_render": [],
     "_extensions": [
         "jinja2.ext.do",
         "jinja2.ext.loopcontrols"
     ],
+    "_hooks": {
+        "post_gen_make_cmds": {
+            "build-docs": false,
+            "changelog": true,
+            "git-init": true,
+            "install": true,
+            "pre-commit-init": true
+        }
+    },
     "_jinja2_env_vars": {
         "lstrip_blocks": true,
         "trim_blocks": true
@@ -33,6 +42,7 @@
     "project_slug": "jcook3701.flatpak",
     "python_version": "3.11",
     "release_summary": "Initial Release of jcook3701.flatpak",
+    "template_type": "ansible",
     "theme": "pmarsceill/just-the-docs",
     "twitter_username": "",
     "version": "1.0.0"

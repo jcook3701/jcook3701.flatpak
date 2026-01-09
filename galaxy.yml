@@ -23,8 +23,7 @@ version: "1.0.0"
 authors:
   - "Jared Cook @jcook3701"
 license:
-  - MIT
-license_file: LICENSE
+  - GPL-3.0
 readme: ./README.md
 description: >
   Ansible installer for flatpak packages.
