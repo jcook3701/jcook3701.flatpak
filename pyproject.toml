@@ -28,7 +28,7 @@ authors = [
     { name="Jared Cook", email="jcook3701+github@gmail.com" }
 ]
 readme = "./README.md"
-license = "MIT"
+license = "GPL-3.0"
 license-files = ["LICENSE"]
 requires-python = ">=3.11"
 dependencies = []
