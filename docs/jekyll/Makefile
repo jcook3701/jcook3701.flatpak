@@ -36,7 +36,7 @@ endef
 # --------------------------------------------------
 PACKAGE_NAME = "flatpak"
 AUTHOR = "Jared Cook"
-VERSION = "1.0.1"
+VERSION = "1.0.2"
 PUBLISHDIR ?=
 # --------------------------------------------------
 # 📘 Documentation (Sphinx + Jekyll)
