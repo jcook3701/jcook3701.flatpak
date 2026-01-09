@@ -470,7 +470,7 @@ galaxy-publish:
 # --------------------------------------------------
 pre-commit: test security dependency-check format-fix lint-check spellcheck typecheck
 pre-release: clean install pre-commit build-docs changelog galaxy-build
-# release: git-release galaxy-publish bump-version-patch
+release: git-release bump-version-patch
 # --------------------------------------------------
 # 🧹 Clean artifacts
 # --------------------------------------------------
