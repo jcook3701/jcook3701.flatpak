@@ -1,0 +1,8 @@
+# SPDX-FileCopyrightText: Copyright © 2026, Jared Cook
+# SPDX-License-Identifier: GPL-3.0-or-later
+---
+- name: Install Github-Desktop with flatpak
+  community.general.flatpak:
+    name: io.github.shiftey.Desktop
+    state: present
+  when: ansible_facts.packages['flatpak'] is defined

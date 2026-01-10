@@ -42,6 +42,7 @@ inventory.yml
 /host_vars
 /collections
 changelogs/.plugin-cache.yaml
+importer_result.json
 # =========================================
 ## Default Ignores #
 # =========================================
