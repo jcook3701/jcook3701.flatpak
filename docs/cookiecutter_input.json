@@ -13,7 +13,7 @@
     ],
     "_hooks": {
         "post_gen_make_cmds": {
-            "build-docs": true,
+            "build-docs": false,
             "changelog": true,
             "git-init": true,
             "install": true,

@@ -126,7 +126,7 @@
 <ol>
   <li>Documentation is currently getting wrong project_slug/name. ❌
     <ul>
-      <li>Currently path for documentation is just the $(project_name) and not the $(namespace).$(project_name).</li>
+      <li>Currently path for documentation is just the <code class="language-plaintext highlighter-rouge">$(project_name)</code> and not the <code class="language-plaintext highlighter-rouge">$(namespace).$(project_name)</code>.</li>
     </ul>
   </li>
   <li>Finish ci/cd for changelog generation using antsichaut ❌</li>

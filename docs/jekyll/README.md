@@ -132,7 +132,7 @@ $ sudo apt install python3.11
 ### TODO's
 
 1. Documentation is currently getting wrong project_slug/name. ❌
-    * Currently path for documentation is just the $(project_name) and not the $(namespace).$(project_name).
+    * Currently path for documentation is just the ```$(project_name)``` and not the ```$(namespace).$(project_name)```.
 2. Finish ci/cd for changelog generation using antsichaut ❌
 3. Create ci/cd for documentation rather than using pre-commit ❌
 
