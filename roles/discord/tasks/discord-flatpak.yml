@@ -1,4 +1,0 @@
----
-- name: Install Discord with flatpak
-  ansible.builtin.command: flatpak install flathub com.discordapp.Discord
-  when: ansible_facts.packages['flatpak'] is defined

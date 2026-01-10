@@ -457,18 +457,21 @@ git-release: git-dependency-check gh-dependency-check
 # --------------------------------------------------
 galaxy-build:
 	$(AT)echo "🔨 Building Ansible Galaxy collection... 🪐"
-	$(AT)$(ANSIBLE_GALAXY) collection build $(GALAXY_PATH)
+	$(AT)$(ANSIBLE_GALAXY) collection build $(GALAXY_PATH) --force
 	$(AT)echo "✅ Build complete."
 
 galaxy-install:
 	$(AT)echo "📦 Installing local Ansible Galaxy collection... 🪐"
-	$(AT)$(ANSIBLE_GALAXY) collection install $(GALAXY_NAMESPACE)-$(GALAXY_COLLECTION)-*.tar.gz --force
+	$(AT)$(ANSIBLE_GALAXY) collection install $(GALAXY_NAMESPACE)-$(GALAXY_COLLECTION)-*.tar.gz --pre --force
 	$(AT)echo "✅ Installed."
 
 galaxy-publish:
 	$(AT)echo "🚀 Publishing collection to Ansible Galaxy... 🪐"
 	$(AT)$(ANSIBLE_GALAXY) collection publish $(GALAXY_NAMESPACE)-$(GALAXY_COLLECTION)-*.tar.gz
 	$(AT)echo "✅ Published."
+
+galaxy-import: galaxy-build
+	$(GALAXY_IMPORTER) $(GALAXY_NAMESPACE)-$(GALAXY_COLLECTION)-*.tar.gz
 # --------------------------------------------------
 # 📢 Release
 # --------------------------------------------------

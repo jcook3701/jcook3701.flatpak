@@ -1,0 +1,9 @@
+# SPDX-FileCopyrightText: Copyright © 2026, Jared Cook
+# SPDX-License-Identifier: GPL-3.0-or-later
+---
+- name: Install Discord with flatpak
+  community.general.flatpak:
+    name: com.discordapp.Discord
+    state: present
+    remote: flathub
+  when: ansible_facts.packages['flatpak'] is defined
