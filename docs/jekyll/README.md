@@ -99,6 +99,21 @@ $ make help
 ## Commit Help:
 
 __Note:__ Commits are required to be conventional git commit message.  This helps with the auto-generation of the changelog files and is enforced by pre-commit.  
+
+__options (default):__
+
+* docs
+* chore
+* feat
+* fix
+* refactor
+* ci
+* test
+* perf
+* revert
+* build
+* style
+
 __example:__  
 
 ```shell

@@ -90,8 +90,25 @@
 
 <h2 id="commit-help">Commit Help:</h2>
 
-<p><strong>Note:</strong> Commits are required to be conventional git commit message.  This helps with the auto-generation of the changelog files and is enforced by pre-commit.<br />
-<strong>example:</strong></p>
+<p><strong>Note:</strong> Commits are required to be conventional git commit message.  This helps with the auto-generation of the changelog files and is enforced by pre-commit.</p>
+
+<p><strong>options (default):</strong></p>
+
+<ul>
+  <li>docs</li>
+  <li>chore</li>
+  <li>feat</li>
+  <li>fix</li>
+  <li>refactor</li>
+  <li>ci</li>
+  <li>test</li>
+  <li>perf</li>
+  <li>revert</li>
+  <li>build</li>
+  <li>style</li>
+</ul>
+
+<p><strong>example:</strong></p>
 
 <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;<span class="nb">type</span><span class="o">&gt;[</span>optional scope]: &lt;description&gt;
 

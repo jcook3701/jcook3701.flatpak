@@ -17,10 +17,11 @@
 # along with this program.  If not, see <www.gnu.org>.
 #
 ---
-name: Update Changelog
+name: Update Ansible Changelog
 on:
   push:
     branches: [main]
+    tags: ['*']
   workflow_dispatch: # Allows manual trigger from the Actions tab
 
 jobs:
@@ -35,21 +36,28 @@ jobs:
           fetch-depth: 0 # Fetches all history for tag discovery
 
       - name: Set up Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
-          python-version: '3.x'
+          python-version: '3.11'
 
-      - name: Install antsichaut
-        run: pip install antsichaut
+      - name: Install Tools (antsichaut & antsibull-changelog)
+        run: pip install antsichaut antsibull-changelog
 
-      - name: Run antsichaut
-        run: |
-          antsichaut --token ${{ secrets.GITHUB_TOKEN }} --repo ${{ github.repository }}
+      # Step 1: Update the YAML data from GitHub PRs
+      - name: Run Antsichaut
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        run: antsichaut --token ${{ secrets.GITHUB_TOKEN }} --repo ${{ github.repository }}
 
-      - name: Commit and push changes
+      # Step 2: Generate the final .rst file for a release
+      - name: Run Antsibull Release
+        if: startsWith(github.ref, 'refs/tags/')
+        run: antsibull-changelog release --version ${{ github.ref_name }}
+
+      - name: Commit and Push Changes
         run: |
           git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add changelog.yaml
-          git commit -m "docs: auto-update changelog" || echo "No changes to commit"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add changelogs/ CHANGELOG.rst || true
+          git commit -m "docs(changelog): update changelog" \
+            -m "Automated update performed by github-actions[bot]" || echo "No changes to commit"
           git push
