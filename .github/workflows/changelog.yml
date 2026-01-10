@@ -20,7 +20,9 @@
 name: Update Ansible Changelog
 on:
   push:
-    branches: [main]
+    branches:
+        - main
+        - master
     tags: ['*']
   workflow_dispatch: # Allows manual trigger from the Actions tab
 
