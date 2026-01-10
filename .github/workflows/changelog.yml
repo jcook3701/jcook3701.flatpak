@@ -46,7 +46,8 @@ jobs:
       # Step 1: Update the YAML data from GitHub PRs
       - name: Run Antsichaut
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
-        run: antsichaut --token ${{ secrets.GITHUB_TOKEN }} \
+        run: antsichaut \
+          --github_token ${{ secrets.GITHUB_TOKEN }} \
           --repository ${{ github.repository }} \
           --since_version latest
 
