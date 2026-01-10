@@ -13,7 +13,8 @@
 
 <hr />
 
-<p><img src="https://github.com/jcook3701/jcook3701.flatpak/actions/workflows/dependency-check.yml/badge.svg" alt="dependency-check" />
+<p><img src="https://github.com/jcook3701/jcook3701.flatpak/actions/workflows/changelog.yml/badge.svg" alt="changelog" />
+<img src="https://github.com/jcook3701/jcook3701.flatpak/actions/workflows/dependency-check.yml/badge.svg" alt="dependency-check" />
 <img src="https://github.com/jcook3701/jcook3701.flatpak/actions/workflows/format-check.yml/badge.svg" alt="format-check" />
 <img src="https://github.com/jcook3701/jcook3701.flatpak/actions/workflows/lint-check.yml/badge.svg" alt="lint-check" />
 <img src="https://github.com/jcook3701/jcook3701.flatpak/actions/workflows/security-audit.yml/badge.svg" alt="security-audit" />
