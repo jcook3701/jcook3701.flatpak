@@ -46,7 +46,9 @@ jobs:
       # Step 1: Update the YAML data from GitHub PRs
       - name: Run Antsichaut
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
-        run: antsichaut --token ${{ secrets.GITHUB_TOKEN }} --repo ${{ github.repository }}
+        run: antsichaut --token ${{ secrets.GITHUB_TOKEN }} \
+          --repository ${{ github.repository }} \
+          --since_version latest
 
       # Step 2: Generate the final .rst file for a release
       - name: Run Antsibull Release

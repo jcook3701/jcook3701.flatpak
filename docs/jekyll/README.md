@@ -16,6 +16,7 @@ __Version:__ {{ site.version }}
 ![spellcheck](https://github.com/jcook3701/jcook3701.flatpak/actions/workflows/spellcheck.yml/badge.svg)
 ![tests](https://github.com/jcook3701/jcook3701.flatpak/actions/workflows/tests.yml/badge.svg)
 ![typecheck](https://github.com/jcook3701/jcook3701.flatpak/actions/workflows/typecheck.yml/badge.svg)
+<!-- ![release](https://github.com/jcook3701/jcook3701.flatpak/actions/workflows/release.yml/badge.svg) -->
 
 ***
 

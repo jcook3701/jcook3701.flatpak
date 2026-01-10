@@ -20,7 +20,8 @@
 <img src="https://github.com/jcook3701/jcook3701.flatpak/actions/workflows/security-audit.yml/badge.svg" alt="security-audit" />
 <img src="https://github.com/jcook3701/jcook3701.flatpak/actions/workflows/spellcheck.yml/badge.svg" alt="spellcheck" />
 <img src="https://github.com/jcook3701/jcook3701.flatpak/actions/workflows/tests.yml/badge.svg" alt="tests" />
-<img src="https://github.com/jcook3701/jcook3701.flatpak/actions/workflows/typecheck.yml/badge.svg" alt="typecheck" /></p>
+<img src="https://github.com/jcook3701/jcook3701.flatpak/actions/workflows/typecheck.yml/badge.svg" alt="typecheck" />
+<!-- ![release](https://github.com/jcook3701/jcook3701.flatpak/actions/workflows/release.yml/badge.svg) --></p>
 
 <hr />
 
