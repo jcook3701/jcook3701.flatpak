@@ -1,12 +1,17 @@
 # {{ site.title }}
 
-__Author:__ {{ site.author }}  
-__Version:__ {{ site.version }}  
+[![License](https://img.shields.io/github/license/{{ site.github_username }}{{ site.baseurl }})](LICENSE.md)
+
+**Author:** {{ site.author }}  
+**Version:** {{ site.version }}  
 
 ## Overview
+
 {{ site.description }}  
 
 ***
+
+**CI/CD Check List:**
 
 ![changelog](https://github.com/jcook3701/jcook3701.flatpak/actions/workflows/changelog.yml/badge.svg)
 ![dependency-check](https://github.com/jcook3701/jcook3701.flatpak/actions/workflows/dependency-check.yml/badge.svg)
@@ -100,9 +105,9 @@ $ make help
 
 ## Commit Help:
 
-__Note:__ Commits are required to be conventional git commit message.  This helps with the auto-generation of the changelog files and is enforced by pre-commit.  
+**Note:** Commits are required to be conventional git commit message.  This helps with the auto-generation of the changelog files and is enforced by pre-commit.  
 
-__options (default):__
+**options (default):**
 
 * docs
 * chore
@@ -116,7 +121,7 @@ __options (default):__
 * build
 * style
 
-__example:__  
+**example:**  
 
 ```shell
 <type>[optional scope]: <description>
@@ -134,9 +139,9 @@ __example:__
 
 ***
 
-## Requirements:
+## Requirements
 
-__Python 3.11__  
+**Python 3.11**  
 
 ```shell
 $ sudo apt install python3.11
@@ -151,6 +156,7 @@ $ sudo apt install python3.11
 1. Documentation is currently getting wrong project_slug/name. ❌
     * Currently path for documentation is just the ```$(project_name)``` and not the ```$(namespace).$(project_name)```.
 2. Finish ci/cd for changelog generation using antsichaut ❌
-3. Create ci/cd for documentation rather than using pre-commit ❌
+3. Decide if i should:  
+    * Create ci/cd for documentation rather than using pre-commit
 
 ***

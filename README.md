@@ -5,13 +5,18 @@
 -->
 <h1 id="flatpak">flatpak</h1>
 
+<p><a href="LICENSE.md"><img src="https://img.shields.io/github/license/jcook3701/flatpak" alt="License" /></a></p>
+
 <p><strong>Author:</strong> Jared Cook<br />
 <strong>Version:</strong> 1.0.0</p>
 
 <h2 id="overview">Overview</h2>
+
 <p>Ansible installer for flatpak packages.</p>
 
 <hr />
+
+<p><strong>CI/CD Check List:</strong></p>
 
 <p><img src="https://github.com/jcook3701/jcook3701.flatpak/actions/workflows/changelog.yml/badge.svg" alt="changelog" />
 <img src="https://github.com/jcook3701/jcook3701.flatpak/actions/workflows/dependency-check.yml/badge.svg" alt="dependency-check" />
@@ -129,7 +134,7 @@
 
 <hr />
 
-<h2 id="requirements">Requirements:</h2>
+<h2 id="requirements">Requirements</h2>
 
 <p><strong>Python 3.11</strong></p>
 
@@ -149,7 +154,11 @@
     </ul>
   </li>
   <li>Finish ci/cd for changelog generation using antsichaut ❌</li>
-  <li>Create ci/cd for documentation rather than using pre-commit ❌</li>
+  <li>Decide if i should:
+    <ul>
+      <li>Create ci/cd for documentation rather than using pre-commit</li>
+    </ul>
+  </li>
 </ol>
 
 <hr />
