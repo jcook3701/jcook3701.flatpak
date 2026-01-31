@@ -1,17 +1,51 @@
 # flatpak Documentation
 ---
-
 title: "flatpak"
 author: "Jared Cook"
 version: "1.0.0"
+license: "AGPL-3.0-or-later"
+copyright: "Copyright (c) 2025-2026, Jared Cook"
+timezone: "America/Los_Angeles"
 description: "Ansible installer for flatpak packages."
-remote_theme: "pmarsceill/just-the-docs"
+remote_theme: "just-the-docs/just-the-docs@v0.11.0"
 ga_tracking: "G-C7PWLWSHB9"
 
-repo_name: "flatpak"
+repo_url: "https://github.com/jcook3701/flatpak"
+repo_blob: "https://github.com/jcook3701/flatpak/blob/master"
+github_io_url: "https://jcook3701.github.io/flatpak"
+repository: "jcook3701/flatpak"
+
+# Specifies the site's subpath for correct URL generation
 baseurl: "/flatpak"
-repo_url: >
-  https://github.com/jcook3701/flatpak
+
+collections:
+  manual:
+    output: true
+    permalink: /:collection/:path
+
+  resources:
+    output: true
+    permalink: /:collection/:path
+
+just_the_docs:
+  collections:
+    manual:
+      name: Manual
+      nav_fold: true
+      nav_exclude: false
+
+    resources:
+      name: "External Links"
+      nav_fold: false
+      nav_exclude: false
+
+plugins:
+  - jekyll-remote-theme
+  - jekyll-redirect-from
+  - jekyll-seo-tag
+  - jekyll-github-metadata
+  - jekyll-include-cache
+  - jekyll-sitemap
 
 # Author Remote User Accounts
 # twitter_username: ""
@@ -64,19 +98,14 @@ aux_links_new_tab: false
 #     using page variables or the minimal layout
 nav_enabled: true
 
-# External navigation links
-nav_external_links:
-  - title: "flatpak on GitHub"
-    url: "https://github.com/jcook3701/flatpak"
-
 # Back to top link
 back_to_top: true
 back_to_top_text: "Back to top"
 
 footer_content: >-
-  Copyright &copy; 2025 Jared Cook. Distributed by an
-  <a href="https://github.com/jcook3701/flatpak/blob/master/LICENSE">
-      MIT license.
+  Copyright (c) 2025-2026, Jared Cook. Distributed by an
+  <a href="https://github.com/jcook3701/flatpak/blob/master/LICENSE.md">
+      AGPL-3.0-or-later license.
   </a>
   <a href=""></a>
 
@@ -118,14 +147,11 @@ callouts:
     title: Warning
     color: red
 
-plugins:
-  - jekyll-seo-tag
-  - jekyll-github-metadata
-  - jekyll-include-cache
-  - jekyll-sitemap
-
 kramdown:
   auto_ids: true
+
+include:
+  - .well-known
 
 # Exclude files/folders from Jekyll processing
 exclude:

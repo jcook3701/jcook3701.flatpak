@@ -1,27 +1,25 @@
 # changelog.yml for jcook3701.flatpak
 #
-# Copyright (c) 2026, Jared Cook
-# SPDX-License-Identifier: GPL-3.0-or-later
+# SPDX-FileCopyrightText: Jared Cook
+# SPDX-License-Identifier: AGPL-3.0-or-later
 #
 # This program is free software: you can redistribute it and/or modify
-# it under the terms of the GNU General Public License as published by
-# the Free Software Foundation, either version 3 of the License, or
-# (at your option) any later version.
+# it under the terms of the GNU Affero General Public License as
+# published by the Free Software Foundation, either version 3 of the
+# License, or (at your option) any later version.
 #
 # This program is distributed in the hope that it will be useful,
 # but WITHOUT ANY WARRANTY; without even the implied warranty of
 # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-# GNU General Public License for more details.
+# GNU Affero General Public License for more details.
 #
-# You should have received a copy of the GNU General Public License
-# along with this program.  If not, see <www.gnu.org>.
-#
+# You should have received a copy of the GNU Affero General Public License
+# along with this program.  If not, see <https://www.gnu.org/licenses/>.
 ---
-name: Update Ansible Changelog
+name: Update Changelog
 on:
   push:
-    branches: [main]
-    tags: ['*']
+    branches: [main, master]
   workflow_dispatch: # Allows manual trigger from the Actions tab
 
 jobs:
@@ -40,27 +38,17 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: Install Tools (antsichaut & antsibull-changelog)
-        run: pip install antsichaut antsibull-changelog
+      - name: Install antsichaut
+        run: pip install antsichaut
 
-      # Step 1: Update the YAML data from GitHub PRs
-      - name: Run Antsichaut
-        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
-        run: antsichaut \
-          --github_token ${{ secrets.GITHUB_TOKEN }} \
-          --repository ${{ github.repository }} \
-          --since_version latest
+      - name: Run antsichaut
+        run: |
+          antsichaut --token ${{ secrets.GITHUB_TOKEN }} --repo ${{ github.repository }}
 
-      # Step 2: Generate the final .rst file for a release
-      - name: Run Antsibull Release
-        if: startsWith(github.ref, 'refs/tags/')
-        run: antsibull-changelog release --version ${{ github.ref_name }}
-
-      - name: Commit and Push Changes
+      - name: Commit and push changes
         run: |
           git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add changelogs/ CHANGELOG.rst || true
-          git commit -m "docs(changelog): update changelog" \
-            -m "Automated update performed by github-actions[bot]" || echo "No changes to commit"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add changelog.yaml
+          git commit -m "docs: auto-update changelog" || echo "No changes to commit"
           git push
