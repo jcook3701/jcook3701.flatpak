@@ -5,7 +5,7 @@
 -->
 <h1 id="flatpak">flatpak</h1>
 
-<p><a href="LICENSE.md"><img src="https://img.shields.io/github/license/jcook3701/flatpak" alt="License" /></a></p>
+<p><a href="LICENSE.md"><img src="https://img.shields.io/github/license/jcook3701/jcook3701.flatpak" alt="License" /></a></p>
 
 <p><strong>Author:</strong> Jared Cook<br />
 <strong>Version:</strong> 1.0.0</p>
