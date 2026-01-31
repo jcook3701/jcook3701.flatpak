@@ -49,7 +49,7 @@ sections:
   - Bugfixes
 - - known_issues
   - Known Issues
-title: 'jcook3701 flatpak'
+title: "jcook3701 flatpak"
 trivial_section_name: trivial
 use_fqcn: true
 vcs: auto
