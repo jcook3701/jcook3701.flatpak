@@ -1,5 +1,5 @@
 # SPDX-FileCopyrightText: Copyright © 2026, Jared Cook
-# SPDX-License-Identifier: GPL-3.0-or-later
+# SPDX-License-Identifier: AGPL-3.0-or-later
 ---
 - name: Install Discord with flatpak
   community.general.flatpak:
