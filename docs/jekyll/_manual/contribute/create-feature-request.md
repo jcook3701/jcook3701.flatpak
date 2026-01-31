@@ -13,15 +13,15 @@ Feature requests help us understand what you need from flatpak. This document gu
 We're excited to hear your ideas! Before you submit a feature request, consider these resources:
 
 - Read the [Code of Conduct]({{ site.repo_blob }}/.github/CODE_OF_CONDUCT.md) to understand our community guidelines.
-- Search [existing feature requests](https://github.com/jcook3701/flatpak/issues?q=is%3Aissue+is%3Aopen+label%3Atype%2Ffeature-request) to see if someone already suggested something similar.
+- Search [existing feature requests](https://github.com/jcook3701/jcook3701.flatpak/issues?q=is%3Aissue+is%3Aopen+label%3Atype%2Ffeature-request) to see if someone already suggested something similar.
 
 ## Your first feature request
 
-When you're ready to submit a feature request, use the [feature request template](https://github.com/jcook3701/flatpak/issues/new?template=02-feature-request.yml). The template has three sections that help maintainers understand what you need and why.
+When you're ready to submit a feature request, use the [feature request template](https://github.com/jcook3701/jcook3701.flatpak/issues/new?template=02-feature-request.yml). The template has three sections that help maintainers understand what you need and why.
 
 <!-- TODO: Put together an example feature request.
 
-Here's an [example of how all three sections work together in an actual feature request](https://github.com/jcook3701/flatpak) from the flatpak community. We'll analyze each section based on this example feature request. -->
+Here's an [example of how all three sections work together in an actual feature request](https://github.com/jcook3701/jcook3701.flatpak) from the flatpak community. We'll analyze each section based on this example feature request. -->
 
 ## Best practices for feature requests
 
