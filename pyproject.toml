@@ -1,37 +1,38 @@
 # pyproject.toml for jcook3701.flatpak
 #
-# Copyright (c) 2026, Jared Cook
-# SPDX-License-Identifier: GPL-3.0-or-later
+# SPDX-FileCopyrightText: Jared Cook
+# SPDX-License-Identifier: AGPL-3.0-or-later
 #
 # This program is free software: you can redistribute it and/or modify
-# it under the terms of the GNU General Public License as published by
-# the Free Software Foundation, either version 3 of the License, or
-# (at your option) any later version.
+# it under the terms of the GNU Affero General Public License as
+# published by the Free Software Foundation, either version 3 of the
+# License, or (at your option) any later version.
 #
 # This program is distributed in the hope that it will be useful,
 # but WITHOUT ANY WARRANTY; without even the implied warranty of
 # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-# GNU General Public License for more details.
+# GNU Affero General Public License for more details.
 #
-# You should have received a copy of the GNU General Public License
-# along with this program.  If not, see <www.gnu.org>.
-#
+# You should have received a copy of the GNU Affero General Public License
+# along with this program.  If not, see <https://www.gnu.org/licenses/>.
 [build-system]
-requires = ["setuptools>=65.0.0", "wheel"]
+requires = ["setuptools>=80.0.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "jcook3701_flatpak"
+name = "jcook3701.flatpak"
 version = "1.0.0"
 description = "Ansible installer for flatpak packages."
 authors = [
     { name="Jared Cook", email="jcook3701+github@gmail.com" }
 ]
 readme = "./README.md"
-license = "GPL-3.0"
-license-files = ["LICENSE"]
+license = "AGPL-3.0-or-later"
+license-files = ["LICENSE.md"]
 requires-python = ">=3.11"
-dependencies = []
+dependencies = [
+  "nutri-matic>=0.1",
+]
 keywords = [
   "ansible",
   "galaxy",
@@ -45,9 +46,9 @@ classifiers = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/jcook3701.flatpak"
-Repository = "https://github.com/jcook3701.flatpak"
-Documentation = "https://github.com/jcook3701.flatpak/docs/jekyll"
+Homepage = "https://github.com/jcook3701/jcook3701.flatpak"
+Repository = "https://github.com/jcook3701/jcook3701.flatpak"
+Documentation = "https://github.com/jcook3701/jcook3701.flatpak/docs/jekyll"
 
 [project.optional-dependencies]
 dev = [
@@ -65,8 +66,12 @@ tools = [
   "cookiecutter-project-upgrader>=1.3",
   "coverage>=7.12",
   "deptry>=0.24",
+  "djlint>=1.36",
+  "json-lint-tools>=0.1",
+  "jinja2-cli>=0.8",
+  "jinja2-time>=0.2",
   "mypy==1.9",
-  "nutri-matic>=0.1",
+  "nameisok>=0.1",
   "pip-audit>=2.10",
   "pre-commit>=4.5",
   "pytest>=9.0",

@@ -1,21 +1,20 @@
 # Makefile for jcook3701.flatpak
 #
-# Copyright (c) 2026, Jared Cook
-# SPDX-License-Identifier: GPL-3.0-or-later
+# SPDX-FileCopyrightText: Jared Cook
+# SPDX-License-Identifier: AGPL-3.0-or-later
 #
 # This program is free software: you can redistribute it and/or modify
-# it under the terms of the GNU General Public License as published by
-# the Free Software Foundation, either version 3 of the License, or
-# (at your option) any later version.
+# it under the terms of the GNU Affero General Public License as
+# published by the Free Software Foundation, either version 3 of the
+# License, or (at your option) any later version.
 #
 # This program is distributed in the hope that it will be useful,
 # but WITHOUT ANY WARRANTY; without even the implied warranty of
 # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-# GNU General Public License for more details.
+# GNU Affero General Public License for more details.
 #
-# You should have received a copy of the GNU General Public License
-# along with this program.  If not, see <www.gnu.org>.
-#
+# You should have received a copy of the GNU Affero General Public License
+# along with this program.  If not, see <https://www.gnu.org/licenses/>.
 # --------------------------------------------------
 # ⚙️ Environment Settings
 # --------------------------------------------------
@@ -202,7 +201,7 @@ AUTODOC_FIX := sed -i 's|yaml.load(yaml_file)|yaml.load(yaml_file, Loader=yaml.S
 # --------------------------------------------------
 # (Add functions here)
 # --------------------------------------------------
-.PHONY: all list-python-folders autodoc-hack venv install pre-commit-init security \
+.PHONY: all list-python-folders autodoc-hack venv python-install pre-commit-init security \
 	dependency-check black-formatter-check black-formatter-fix format-check \
 	format-fix ruff-lint-check ruff-lint-fix toml-lint-check yaml-lint-check \
 	ansible-lint-check lint-check lint-fix spellcheck typecheck test sphinx \
@@ -212,7 +211,7 @@ AUTODOC_FIX := sed -i 's|yaml.load(yaml_file)|yaml.load(yaml_file, Loader=yaml.S
 # --------------------------------------------------
 # Default: run lint, typecheck, tests, and docs
 # --------------------------------------------------
-all: install lint-check typecheck spellcheck test build-docs
+all: python-install lint-check typecheck spellcheck test build-docs
 # --------------------------------------------------
 # Utilities
 # --------------------------------------------------
@@ -246,7 +245,7 @@ venv:
 	$(AT)$(CREATE_VENV)
 	$(AT)echo "✅ Virtual environment created."
 
-install: venv
+python-install: venv
 	$(AT)echo "📦 Installing project dependencies..."
 	$(AT)$(PIP) install --upgrade pip setuptools wheel
 	$(AT)$(PIP) install -e $(DEV_DEPS)
@@ -477,7 +476,7 @@ galaxy-import:
 # 📢 Release
 # --------------------------------------------------
 pre-commit: test security dependency-check format-fix lint-check spellcheck typecheck
-pre-release: clean install pre-commit build-docs changelog galaxy-build
+pre-release: clean python-install pre-commit build-docs changelog galaxy-build
 release: git-release bump-version-patch
 # --------------------------------------------------
 # 🧹 Clean artifacts
@@ -518,7 +517,7 @@ help:
 	$(AT)echo ""
 	$(AT)echo "Usage:"
 	$(AT)echo "  make venv                   Create virtual environment"
-	$(AT)echo "  make install                Install dependencies"
+	$(AT)echo "  make python-install                Install dependencies"
 	$(AT)echo "  make black-formatter-check  Run Black formatter check"
 	$(AT)echo "  make black-formatter-fix    Run Black formatter"
 	$(AT)echo "  make ruff-lint-check        Run Ruff linter"
