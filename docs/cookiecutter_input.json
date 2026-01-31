@@ -14,10 +14,10 @@
     "_hooks": {
         "post_gen_make_cmds": {
             "build-docs": false,
-            "changelog": true,
-            "git-init": true,
+            "changelog": false,
+            "git-init": false,
             "python-install": true,
-            "pre-commit-init": true
+            "pre-commit-init": false
         }
     },
     "_jinja2_env_vars": {
@@ -45,7 +45,6 @@
     "template_type": "ansible",
     "theme": "just-the-docs/just-the-docs@v0.11.0",
     "timezone": "America/Los_Angeles",
-
     "twitter_username": "",
     "version": "1.0.0"
 }
