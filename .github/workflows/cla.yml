@@ -51,7 +51,7 @@ jobs:
           path-to-signatures: "cla/v1/signatures.json"
           path-to-document: "https://jcook3701.github.io/jcook3701.flatpak/manual/developer-resources/cla"
           # branch should not be protected
-          branch: "main" # Should match the branch that github pages are hosted from.
+          branch: "master" # Should match the branch that github pages are hosted from.
           allowlist: "jcook3701,github-actions[bot],dependabot[bot],bot*"
 
           # If the below optional inputs are not given, then default values will be taken:

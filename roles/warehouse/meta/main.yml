@@ -3,7 +3,7 @@
 ---
 galaxy_info:
   author: "Jared Cook"
-  description: "Install Discord flatpak."
+  description: "Install Warehouse flatpak."
   # company: "Optional Company Name"
 
   # Must use valid SPDX identifiers like 'GPL-3.0-or-later'

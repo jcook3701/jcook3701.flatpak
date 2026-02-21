@@ -36,22 +36,45 @@
 
 <hr />
 
-<h2 id="authors-notes">Author’s Notes</h2>
+<h2 id="-getting-started">🌱 Getting Started</h2>
 
-<h3 id="todos">TODO’s</h3>
+<ul>
+  <li><a href="https://jcook3701.github.io/jcook3701.flatpak/manual/setup-guide/requirements">Requirements</a></li>
+  <li><a href="https://jcook3701.github.io/jcook3701.flatpak/manual/introduction/installation-guide">Installation guide</a></li>
+</ul>
 
-<ol>
-  <li>Documentation is currently getting wrong project_slug/name. ❌
-    <ul>
-      <li>Currently path for documentation is just the <code class="language-plaintext highlighter-rouge">$(project_name)</code> and not the <code class="language-plaintext highlighter-rouge">$(namespace).$(project_name)</code>.</li>
-    </ul>
-  </li>
-  <li>Finish ci/cd for changelog generation using antsichaut ❌</li>
-  <li>Decide if i should:
-    <ul>
-      <li>Create ci/cd for documentation rather than using pre-commit</li>
-    </ul>
-  </li>
-</ol>
+<h2 id="-documentation">📚 Documentation</h2>
 
-<hr />
+<p>The flatpak documentation is available at <a href="https://jcook3701.github.io/jcook3701.flatpak">docs</a>.</p>
+
+<h2 id="-contributing">🤝 Contributing</h2>
+
+<p>If you’re interested in contributing to the flatpak project:</p>
+
+<ul>
+  <li>Start by reading the <a href="https://jcook3701.github.io/jcook3701.flatpak/manual/developer-resources/contribute">contributing guide</a>.</li>
+  <li>Learn how to setup your local environment, in our <a href="https://jcook3701.github.io/jcook3701.flatpak/manual/contribute/developer-guide">developer guide</a>.</li>
+  <li>Look through our <a href="https://jcook3701.github.io/jcook3701.flatpak/manual/contribute/style-guides/index">style guide</a>.</li>
+</ul>
+
+<h2 id="-authors-notes">🍹 Authors Notes</h2>
+
+<h2 id="️-license">⚖️ License</h2>
+
+<p>Copyright (c) 2025-2026, Jared Cook</p>
+
+<p>This project is licensed under the <strong>AGPL-3.0-or-later License</strong>.<br />
+See the <a href="https://github.com/jcook3701/jcook3701.flatpak/blob/master/LICENSE.md">LICENSE</a> file for the full license text.</p>
+
+<p>SPDX-License-Identifier: AGPL-3.0-or-later</p>
+
+<!--
+### TODO's
+
+1. Documentation is currently getting wrong project_slug/name. ❌
+    * Currently path for documentation is just the ```$(project_name)``` and not the ```$(namespace).$(project_name)```.
+2. Finish ci/cd for changelog generation using antsichaut ❌
+3. Decide if i should:  
+    * Create ci/cd for documentation rather than using pre-commit
+
+-->
