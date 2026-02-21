@@ -29,8 +29,35 @@
 
 ***
 
-## Author's Notes
+## 🌱 Getting Started
 
+* [Requirements]({{ site.github_io_url }}/manual/setup-guide/requirements)
+* [Installation guide]({{ site.github_io_url }}/manual/introduction/installation-guide)  
+
+## 📚 Documentation
+
+The {{ site.title }} documentation is available at [docs]({{ site.github_io_url }}).  
+
+## 🤝 Contributing
+
+If you're interested in contributing to the {{ site.title }} project:  
+
+* Start by reading the [contributing guide]({{ site.github_io_url }}/manual/developer-resources/contribute).  
+* Learn how to setup your local environment, in our [developer guide]({{ site.github_io_url }}/manual/contribute/developer-guide).  
+* Look through our [style guide]({{ site.github_io_url }}/manual/contribute/style-guides/index).  
+
+## 🍹 Authors Notes
+
+## ⚖️ License
+
+{{ site.copyright }}  
+
+This project is licensed under the **{{ site.license }} License**.  
+See the [LICENSE]({{ site.repo_blob }}/LICENSE.md) file for the full license text.  
+
+SPDX-License-Identifier: {{ site.license }}  
+
+<!--
 ### TODO's
 
 1. Documentation is currently getting wrong project_slug/name. ❌
@@ -39,4 +66,4 @@
 3. Decide if i should:  
     * Create ci/cd for documentation rather than using pre-commit
 
-***
+-->
