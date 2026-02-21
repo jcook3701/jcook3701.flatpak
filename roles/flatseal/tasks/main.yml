@@ -1,8 +1,9 @@
 # SPDX-FileCopyrightText: Copyright © 2026, Jared Cook
 # SPDX-License-Identifier: AGPL-3.0-or-later
 ---
-- name: Install Github-Desktop with flatpak
+- name: Manage Flatseal flatpak
   community.general.flatpak:
-    name: io.github.shiftey.Desktop
-    state: present
+    name: com.github.tchx84.Flatseal
+    state: "{{ flatseal_state | default('present') }}"
+    remote: flathub
   when: ansible_facts.packages['flatpak'] is defined
