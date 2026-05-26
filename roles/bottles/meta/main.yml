@@ -3,14 +3,14 @@
 ---
 galaxy_info:
   author: "Jared Cook"
-  description: "Install Warehouse flatpak."
+  description: "Install Bottles flatpak."
   # company: "Optional Company Name"
 
   # Must use valid SPDX identifiers like 'GPL-3.0-or-later'
   license: "AGPL-3.0-or-later"
 
   min_ansible_version: "2.10"
-  role_name: warehouse
+  role_name: bottles
 
   # Galaxy/Automation Hub uses these to categorize your role
   platforms:

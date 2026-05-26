@@ -1,0 +1,11 @@
+# SPDX-FileCopyrightText: Copyright © 2026, Jared Cook
+# SPDX-License-Identifier: AGPL-3.0-or-later
+---
+# TODO: Manage Flatpak install/config with jcook3701.pkgs.flatpak
+
+- name: Manage Localsend flatpak
+  community.general.flatpak:
+    name: "{{ localsend_package }}"
+    state: "{{ localsend_state | default('present') }}"
+    remote: "{{ localsend_remote_name }}"
+  when: ansible_facts.packages['flatpak'] is defined

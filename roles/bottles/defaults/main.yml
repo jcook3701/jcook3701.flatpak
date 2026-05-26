@@ -1,0 +1,8 @@
+# SPDX-FileCopyrightText: Copyright © 2026, Jared Cook
+# SPDX-License-Identifier: AGPL-3.0-or-later
+---
+
+bottles_state: present
+bottles_package: com.usebottles.bottles
+bottles_remote_name: flathub
+bottles_remote_url: https://flathub.org
