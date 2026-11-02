@@ -1,0 +1,26 @@
+# SPDX-FileCopyrightText: Copyright © 2026, Jared Cook
+# SPDX-License-Identifier: AGPL-3.0-or-later
+---
+argument_specs:
+  main:
+    short_description: "Manages LocalSend Flatpak installation."
+    description: "This role manages the installation state of the
+      LocalSend Flatpak package."
+    author: "Jared W. Cook"
+    options:
+      localsend_state:
+        type: "str"
+        required: false
+        default: "present"
+        choices: ["present", "absent", "teardown"]
+        description: "The desired deployment state of the LocalSend Flatpak package."
+      localsend_package:
+        type: "str"
+        required: false
+        default: "org.localsend.localsend_app"
+        description: "The Flatpak application identifier for LocalSend."
+      localsend_remote_name:
+        type: "str"
+        required: false
+        default: "flathub"
+        description: "The name of the remote repository hosting the LocalSend Flatpak package."

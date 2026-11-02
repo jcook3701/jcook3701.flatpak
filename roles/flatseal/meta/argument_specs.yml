@@ -1,0 +1,26 @@
+# SPDX-FileCopyrightText: Copyright © 2026, Jared Cook
+# SPDX-License-Identifier: AGPL-3.0-or-later
+---
+argument_specs:
+  main:
+    short_description: "Manages the Flatseal Flatpak installation."
+    description: "This role manages the installation state of the
+      Flatseal Flatpak package."
+    author: "Jared W. Cook"
+    options:
+      flatseal_state:
+        type: "str"
+        required: false
+        default: "present"
+        choices: ["present", "absent", "teardown"]
+        description: "The desired deployment state of the Flatseal Flatpak package."
+      flatseal_package:
+        type: "str"
+        required: false
+        default: "com.github.tchx84.Flatseal"
+        description: "The Flatpak application identifier for Flatseal."
+      flatseal_remote_name:
+        type: "str"
+        required: false
+        default: "flathub"
+        description: "The name of the remote repository hosting the Flatseal Flatpak package."

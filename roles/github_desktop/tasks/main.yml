@@ -1,8 +1,14 @@
 # SPDX-FileCopyrightText: Copyright © 2026, Jared Cook
 # SPDX-License-Identifier: AGPL-3.0-or-later
 ---
-- name: Install Github-Desktop with flatpak
-  community.general.flatpak:
-    name: io.github.shiftey.Desktop
-    state: "{{ github_desktop_state | default('present') }}"
-  when: ansible_facts.packages['flatpak'] is defined
+- name: Gather target host package facts
+  ansible.builtin.package_facts:
+    manager: auto
+
+- name: Ensure Github-Desktop Flatpak is installed
+  ansible.builtin.include_tasks: state/install.yml
+  when: github_desktop_state | default('present') == 'present'
+
+- name: Ensure Github-Desktop Flatpak is uninstalled
+  ansible.builtin.include_tasks: state/uninstall.yml
+  when: github_desktop_state | default('present') in ['absent', 'teardown']

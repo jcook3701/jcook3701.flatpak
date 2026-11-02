@@ -29,4 +29,5 @@ galaxy_info:
     - desktop
     - apps
 
-dependencies: []
+dependencies:
+  - role: jcook3701.pkgs.flatpak
