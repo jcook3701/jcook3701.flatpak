@@ -4,6 +4,12 @@
 
 ## Role Variables
 
+| Variable | Type | Description / Choices | Default |
+| :--- | :--- | :--- | :--- |
+| `warehouse_state` | str | The desired deployment state of the Warehouse Flatpak package.<br>**Choices:** `present`, `absent` | `"present"` |
+| `warehouse_package` | str | The Flatpak application identifier for Warehouse. | `"io.github.flattool.Warehouse"` |
+| `warehouse_remote_name` | str | The name of the remote repository hosting the Warehouse Flatpak package. | `"flathub"` |
+
 ## Example Playbook Calls
 
 Install **Warehouse** Flatpak Application.
