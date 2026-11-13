@@ -1,9 +1,14 @@
 # SPDX-FileCopyrightText: Copyright © 2026, Jared Cook
 # SPDX-License-Identifier: AGPL-3.0-or-later
 ---
-- name: Manage Warehouse flatpak
-  community.general.flatpak:
-    name: io.github.flattool.Warehouse
-    state: "{{ warehouse_state | default('present') }}"
-    remote: flathub
-  when: ansible_facts.packages['flatpak'] is defined
+- name: Gather target host package facts
+  ansible.builtin.package_facts:
+    manager: auto
+
+- name: Ensure Warehouse Flatpak is installed
+  ansible.builtin.include_tasks: state/install.yml
+  when: warehouse_state | default('present') == 'present'
+
+- name: Ensure Warehouse Flatpak is uninstalled
+  ansible.builtin.include_tasks: state/uninstall.yml
+  when: warehouse_state | default('present') in ['absent', 'teardown']

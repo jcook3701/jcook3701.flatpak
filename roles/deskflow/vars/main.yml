@@ -1,0 +1,5 @@
+# SPDX-FileCopyrightText: Copyright © 2026, Jared Cook
+# SPDX-License-Identifier: AGPL-3.0-or-later
+---
+deskflow_directory:
+  conf: "{{ ansible_env.HOME }}/.var/app/{{ deskflow_package }}/config/deskflow"
