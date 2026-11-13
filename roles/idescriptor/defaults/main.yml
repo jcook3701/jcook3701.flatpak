@@ -1,0 +1,6 @@
+# SPDX-FileCopyrightText: Copyright © 2026, Jared Cook
+# SPDX-License-Identifier: AGPL-3.0-or-later
+---
+idescriptor_state: "present"
+idescriptor_package: "io.github.idescriptor.iDescriptor"
+idescriptor_remote_name: "flathub"

@@ -1,0 +1,9 @@
+# SPDX-FileCopyrightText: Copyright © 2026, Jared Cook
+# SPDX-License-Identifier: AGPL-3.0-or-later
+---
+- name: Ensure Localsend flatpak is installed
+  community.general.flatpak:
+    name: "{{ localsend_package | default('org.localsend.localsend_app') }}"
+    state: "present"
+    remote: "{{ localsend_remote_name | default('flathub') }}"
+  when: ansible_facts.packages['flatpak'] is defined

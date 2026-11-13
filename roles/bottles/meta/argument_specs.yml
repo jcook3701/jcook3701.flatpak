@@ -1,0 +1,26 @@
+# SPDX-FileCopyrightText: Copyright © 2026, Jared Cook
+# SPDX-License-Identifier: AGPL-3.0-or-later
+---
+argument_specs:
+  main:
+    short_description: "Manages the Bottles Flatpak installation."
+    description: "This role manages the installation state of the
+      Bottles Flatpak package."
+    author: "Jared W. Cook"
+    options:
+      bottles_state:
+        type: "str"
+        required: false
+        default: "present"
+        choices: ["present", "absent", "teardown"]
+        description: "The desired deployment state of the Bottles Flatpak package."
+      bottles_package:
+        type: "str"
+        required: false
+        default: "com.usebottles.bottles"
+        description: "The Flatpak application identifier for Bottles."
+      bottles_remote_name:
+        type: "str"
+        required: false
+        default: "flathub"
+        description: "The name of the remote repository hosting the Bottles Flatpak package."

@@ -1,0 +1,6 @@
+# SPDX-FileCopyrightText: Copyright © 2026, Jared Cook
+# SPDX-License-Identifier: AGPL-3.0-or-later
+---
+github_desktop_state: "present"
+github_desktop_package: io.github.shiftey.Desktop
+github_desktop_remote_name: flathub
