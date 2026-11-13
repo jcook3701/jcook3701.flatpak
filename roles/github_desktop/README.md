@@ -15,13 +15,13 @@
 **Install:**
 
 ``` shell
-$ ansible-playbook jcook3701.flatpak.github-desktop.yml -K
+$ ansible-playbook jcook3701.flatpak.github_desktop.yml -K
 ```
 
 **Uninstall:**
 
 ``` shell
-$ ansible-playbook jcook3701.flatpak.github-desktop.yml -K -e "github_desktop_state=absent"
+$ ansible-playbook jcook3701.flatpak.github_desktop.yml -K -e "github_desktop_state=absent"
 ```
 
 ## Author Information
