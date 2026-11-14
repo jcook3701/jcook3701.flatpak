@@ -1,0 +1,6 @@
+# SPDX-FileCopyrightText: Copyright © 2026, Jared Cook
+# SPDX-License-Identifier: AGPL-3.0-or-later
+---
+code_state: present
+code_package: com.visualstudio.code
+code_remote_name: flathub

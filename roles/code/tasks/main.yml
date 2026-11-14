@@ -1,0 +1,14 @@
+# SPDX-FileCopyrightText: Copyright © 2026, Jared Cook
+# SPDX-License-Identifier: AGPL-3.0-or-later
+---
+- name: Gather target host package facts
+  ansible.builtin.package_facts:
+    manager: auto
+
+- name: Ensure Code Flatpak is installed
+  ansible.builtin.include_tasks: state/install.yml
+  when: code_state | default('present') == 'present'
+
+- name: Ensure Code Flatpak is uninstalled
+  ansible.builtin.include_tasks: state/uninstall.yml
+  when: code_state | default('present') in ['absent', 'teardown']

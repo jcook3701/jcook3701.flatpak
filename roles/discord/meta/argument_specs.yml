@@ -17,7 +17,7 @@ argument_specs:
       discord_package:
         type: "str"
         required: false
-        default: "org.discordapp.Discord"
+        default: "com.discordapp.Discord"
         description: "The Flatpak application identifier for Discord."
       discord_remote_name:
         type: "str"
